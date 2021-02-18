@@ -1,13 +1,23 @@
+package ru.geekbrains.architect
+
 import java.util.*
 
 fun main() {
-    var expression = Parser parse "(1 + 2) * 4 + 3"
-    println(expression.result)
-    println(expression.rightPolandNotation)
+    println("Type 'exit' to stop")
 
-    expression = Parser parse "(0.0 + (2 - 3) / 2 + 0.5) * 2 - 4.5 * (6 - 2.0)"
-    println(expression.result)
-    println(expression.rightPolandNotation)
+    Scanner(System.`in`).use { scanner ->
+        while (scanner.hasNextLine()) {
+            try {
+                val line = scanner.nextLine()
+                if (line == "exit") break
+                val expression = Parser parse line
+                println(expression.result)
+                println(expression.rightPolandNotation)
+            } catch (e: Throwable) {
+                System.err.println(e)
+            }
+        }
+    }
 }
 
 object Parser {
