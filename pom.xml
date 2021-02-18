@@ -39,7 +39,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        ru.geekbrains.architect.Task1Kt
+                                        ru.geekbrains.architect.ParserCLIKt
                                     </mainClass>
                                 </manifest>
                             </archive>
