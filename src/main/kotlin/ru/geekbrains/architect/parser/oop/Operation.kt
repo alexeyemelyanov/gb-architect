@@ -1,4 +1,4 @@
-package ru.geekbrains.architect
+package ru.geekbrains.architect.parser.oop
 
 enum class Operation(val char: Char, val priority: Int) {
     plus('+', 2), minus('-', 3), multiply('*', 0), divide('/', 1);

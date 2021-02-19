@@ -1,4 +1,4 @@
-package ru.geekbrains.architect
+package ru.geekbrains.architect.parser.oop
 
 class ComplexExpression(ex1: Expression, ex2: Expression, operation: Operation) : Expression {
     override val result: Number = operation.apply(ex1, ex2)

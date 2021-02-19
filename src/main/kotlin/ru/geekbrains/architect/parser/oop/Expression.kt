@@ -1,4 +1,4 @@
-package ru.geekbrains.architect
+package ru.geekbrains.architect.parser.oop
 
 interface Expression {
     val result: Number
